@@ -11,11 +11,11 @@ export class SidebarComponent {
   constructor() {}
 
   menuItems = [
-    { name: 'Basic Signal', route: '/basic-signal' },
-    { name: 'Computed Signal', route: '/computed-signal' },
-    { name: 'Effect', route: '/effect' },
-    { name: 'Signal HTTP', route: '/signal-http' },
+    { name: 'Basic Signals', route: '/basic-signal' },
+    { name: 'Computed Signals', route: '/computed-signal' },
+    { name: 'Effect()', route: '/effect' },
+    { name: 'Signals HTTP', route: '/signal-http' },
     { name: 'Shopping Cart Example', route: '/shopping-cart' },
-    { name: 'Signal Store', route: '/signal-store' },
+    { name: 'Signals Store', route: '/signal-store' },
   ];
 }

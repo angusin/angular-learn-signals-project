@@ -1,0 +1,14 @@
+<div
+  class="px-4 py-2 text-white bg-blue-600 border-r border-1 border-blue-700 rounded-lg mb-4 flex items-center gap-4 justify-end font-semibold text-lg absolute right-6 top-4"
+>
+  <button
+    (click)="emptyCart()"
+    class="bg-blue-200 px-4 py-2 rounded hover:bg-blue-300 cursor-pointer text-xs text-gray-900"
+  >
+    Empty cart
+  </button>
+  <div class="flex gap-2 flex-1 justify-end">
+    <p>{{ carItemsNumber() }} items -</p>
+    <p class="font-extrabold">{{ cartTotalPrice() }}€</p>
+  </div>
+</div>
