@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 interface Post {
   id: number;
@@ -9,7 +10,7 @@ interface Post {
 
 @Component({
   selector: 'app-signal-http',
-  imports: [CommonModule],
+  imports: [CommonModule, BasicPageComponent],
   templateUrl: './d-signal-http.component.html',
 })
 export class SignalHttpComponent {

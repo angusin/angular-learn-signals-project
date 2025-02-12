@@ -1,8 +1,8 @@
-<h2 class="text-2xl font-bold mb-4">Computed Signal Demo</h2>
-<div class="bg-white p-6 rounded-lg shadow-md">
-  <p class="mb-2">First Number: {{ first() }}</p>
+<app-basic-page title="Computed Signal Demo"
+  ><p class="mb-2">First Number: {{ first() }}</p>
   <p class="mb-2">Second Number: {{ second() }}</p>
-  <p class="mb-4">Sum: {{ sum() }}</p>
+  <hr class="h-px my-2 border-0 bg-gray-200" />
+  <p class="mb-4 font-semibold">Sum: {{ sum() }}</p>
   <div class="space-x-2">
     <button
       (click)="incrementFirst()"
@@ -12,9 +12,9 @@
     </button>
     <button
       (click)="incrementSecond()"
-      class="cursor-pointer bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+      class="cursor-pointer bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
     >
       Increment Second
     </button>
-  </div>
-</div>
+  </div></app-basic-page
+>

@@ -1,7 +1,9 @@
 import { Component, effect, signal } from '@angular/core';
+import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 @Component({
   selector: 'app-effect',
+  imports: [BasicPageComponent],
   templateUrl: './c-effect.component.html',
 })
 export class EffectComponent {

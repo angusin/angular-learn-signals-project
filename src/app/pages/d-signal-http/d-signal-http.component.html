@@ -1,6 +1,5 @@
-<h2 class="text-2xl font-bold mb-4">Signal HTTP Demo</h2>
-<div class="bg-white p-6 rounded-lg shadow-md">
-  @if (loading()) {
+<app-basic-page title="Signal HTTP Demo"
+  >@if (loading()) {
   <p>Loading...</p>
   } @else { @if (error()) {
   <p class="text-red-500">{{ error() }}</p>
@@ -13,5 +12,5 @@
     </div>
     }
   </div>
-  } }
-</div>
+  } }</app-basic-page
+>

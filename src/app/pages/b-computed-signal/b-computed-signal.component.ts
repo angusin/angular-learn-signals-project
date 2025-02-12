@@ -1,7 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
+import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 @Component({
   selector: 'app-computed-signal',
+  imports: [BasicPageComponent],
   templateUrl: './b-computed-signal.component.html',
 })
 export class ComputedSignalComponent {

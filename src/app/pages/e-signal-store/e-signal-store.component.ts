@@ -1,5 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 interface CartItem {
   id: number;
@@ -10,7 +11,7 @@ interface CartItem {
 
 @Component({
   selector: 'app-signal-store',
-  imports: [CommonModule],
+  imports: [CommonModule, BasicPageComponent],
   templateUrl: './e-signal-store.component.html',
 })
 export class SignalStoreComponent {

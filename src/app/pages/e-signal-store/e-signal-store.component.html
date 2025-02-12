@@ -1,6 +1,5 @@
-<h2 class="text-2xl font-bold mb-4">Signal Store Demo</h2>
-<div class="bg-white p-6 rounded-lg shadow-md">
-  <div class="mb-4">
+<app-basic-page title="Signal Store Demo"
+  ><div class="mb-4">
     <h3 class="font-bold mb-2">Shopping Cart</h3>
     @for (item of cart(); track item.id) {
     <div class="flex justify-between items-center mb-2">
@@ -8,13 +7,13 @@
       <div class="space-x-2">
         <button
           (click)="updateQuantity(item.id, -1)"
-          class="cursor-pointer px-2 py-1 bg-red-500 text-white rounded"
+          class="cursor-pointer w-8 px-2 py-1 bg-red-600 hover:bg-red-700 text-white rounded"
         >
           -
         </button>
         <button
           (click)="updateQuantity(item.id, 1)"
-          class="cursor-pointer px-2 py-1 bg-green-500 text-white rounded"
+          class="cursor-pointer w-8 px-2 py-1 bg-green-600 hover:bg-green-700 text-white rounded"
         >
           +
         </button>
@@ -25,5 +24,5 @@
   <div class="border-t pt-4">
     <p class="font-bold">Total Items: {{ totalItems() }}</p>
     <p class="font-bold">Total Price: {{ totalPrice() }}</p>
-  </div>
-</div>
+  </div></app-basic-page
+>
