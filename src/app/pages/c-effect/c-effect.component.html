@@ -1,0 +1,11 @@
+<h2 class="text-2xl font-bold mb-4">Effect Demo</h2>
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <p class="mb-4">Value: {{ value() }}</p>
+  <p class="mb-4">Last Effect Run: {{ lastEffectRun() }}</p>
+  <button
+    (click)="increment()"
+    class="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    Update Value
+  </button>
+</div>

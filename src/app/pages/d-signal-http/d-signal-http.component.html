@@ -1,0 +1,17 @@
+<h2 class="text-2xl font-bold mb-4">Signal HTTP Demo</h2>
+<div class="bg-white p-6 rounded-lg shadow-md">
+  @if (loading()) {
+  <p>Loading...</p>
+  } @else { @if (error()) {
+  <p class="text-red-500">{{ error() }}</p>
+  } @else {
+  <div class="space-y-4">
+    @for (post of posts(); track post.id) {
+    <div class="border p-4 rounded">
+      <h3 class="font-bold">{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+    </div>
+    }
+  </div>
+  } }
+</div>

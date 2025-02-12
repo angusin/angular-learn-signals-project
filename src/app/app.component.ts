@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [RouterOutlet],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+  selector: 'app-root',
+  imports: [RouterOutlet, SidebarComponent],
+  templateUrl: './app.component.html',
 })
-export class AppComponent {
-  title = 'signals-example-project';
-}
+export class AppComponent {}
