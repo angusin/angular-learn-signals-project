@@ -4,11 +4,11 @@ import { BasicPageComponent } from '../../components/basic-page/basic-page.compo
 import { CartItem, PRODUCTS } from './data-mock';
 
 @Component({
-  selector: 'app-signal-store',
+  selector: 'app-shopping-cart-example',
   imports: [CommonModule, BasicPageComponent],
-  templateUrl: './e-signal-store.component.html',
+  templateUrl: './e-cart-example.component.html',
 })
-export class SignalStoreComponent {
+export class ShoppingCartExampleComponent {
   cart = signal<CartItem[]>(PRODUCTS);
 
   totalItems = computed(() =>

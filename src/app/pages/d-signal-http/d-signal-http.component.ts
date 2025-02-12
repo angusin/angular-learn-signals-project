@@ -5,7 +5,7 @@ import { BasicPageComponent } from '../../components/basic-page/basic-page.compo
 interface Post {
   id: number;
   title: string;
-  body: string;
+  completed: boolean;
 }
 
 @Component({
@@ -25,10 +25,10 @@ export class SignalHttpComponent {
   async fetchPosts() {
     try {
       const response = await fetch(
-        'https://jsonplaceholder.typicode.com/posts'
+        'https://jsonplaceholder.typicode.com/users/1/todos'
       );
       const data = await response.json();
-      this.posts.set(data.slice(0, 5));
+      this.posts.set(data.slice(0, 10));
       this.loading.set(false);
     } catch (err) {
       this.error.set('Failed to fetch posts');

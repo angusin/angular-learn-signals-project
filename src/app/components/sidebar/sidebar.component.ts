@@ -15,6 +15,7 @@ export class SidebarComponent {
     { name: 'Computed Signal', route: '/computed-signal' },
     { name: 'Effect', route: '/effect' },
     { name: 'Signal HTTP', route: '/signal-http' },
+    { name: 'Shopping Cart Example', route: '/shopping-cart' },
     { name: 'Signal Store', route: '/signal-store' },
   ];
 }

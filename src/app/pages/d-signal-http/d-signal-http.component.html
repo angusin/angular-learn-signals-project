@@ -1,14 +1,23 @@
 <app-basic-page title="Signal HTTP Demo"
   >@if (loading()) {
-  <p>Loading...</p>
+  <p>Loading posts...</p>
   } @else { @if (error()) {
   <p class="text-red-500">{{ error() }}</p>
   } @else {
-  <div class="space-y-4">
+  <div class="grid grid-cols-3 gap-4">
     @for (post of posts(); track post.id) {
-    <div class="border p-4 rounded">
-      <h3 class="font-bold">{{ post.title }}</h3>
-      <p>{{ post.body }}</p>
+    <div class="border border-gray-300 p-4 rounded bg-gray-50">
+      <div
+        [ngClass]="
+          post.completed
+            ? 'bg-green-100 text-green-800'
+            : 'bg-red-100 text-red-800'
+        "
+        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-2 w-max"
+      >
+        {{ post.completed ? "Done" : "Incomplete" }}
+      </div>
+      <h3>{{ post.title }}</h3>
     </div>
     }
   </div>

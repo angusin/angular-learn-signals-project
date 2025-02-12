@@ -30,6 +30,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'shopping-cart',
+    loadComponent: () =>
+      import('./pages/e-cart-example/e-cart-example.component').then(
+        (m) => m.ShoppingCartExampleComponent
+      ),
+  },
+  {
     path: 'signal-store',
     loadComponent: () =>
       import('./pages/e-signal-store/e-signal-store.component').then(
