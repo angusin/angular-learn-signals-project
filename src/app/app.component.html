@@ -4,9 +4,8 @@
 
   <!-- Content -->
   <div class="flex-1 p-6">
-    @if(stateService.cart().length > 0) {
-
-    <app-top-shopping-cart></app-top-shopping-cart>
+    @if (stateService.cart().length > 0) {
+      <app-top-shopping-cart></app-top-shopping-cart>
     }
     <router-outlet></router-outlet>
   </div>

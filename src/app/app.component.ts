@@ -11,4 +11,6 @@ import { StateService } from './services/state.service';
 })
 export class AppComponent {
   stateService = inject(StateService);
+
+  constructor(private stateSrv: StateService) {}
 }

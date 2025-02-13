@@ -8,7 +8,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-
   menuItems = [
     { name: 'Basic Signals', route: '/basic-signal' },
     { name: 'Computed Signals', route: '/computed-signal' },

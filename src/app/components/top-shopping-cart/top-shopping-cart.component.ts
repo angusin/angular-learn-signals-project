@@ -8,15 +8,9 @@ import { StateService } from '../../services/state.service';
   styleUrl: './top-shopping-cart.component.css',
 })
 export class TopShoppingCartComponent {
-  carItemsNumber = computed(() =>
-    this.stateService.cart().reduce((sum, item) => sum + item.quantity, 0)
-  );
+  carItemsNumber = computed(() => this.stateService.cart().reduce((sum, item) => sum + item.quantity, 0));
 
-  cartTotalPrice = computed(() =>
-    this.stateService
-      .cart()
-      .reduce((sum, item) => sum + item.price * item.quantity, 0)
-  );
+  cartTotalPrice = computed(() => this.stateService.cart().reduce((sum, item) => sum + item.price * item.quantity, 0));
 
   stateService = inject(StateService);
 

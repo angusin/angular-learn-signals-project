@@ -1,25 +1,22 @@
-<app-basic-page title="Signals HTTP"
-  >@if (loading()) {
-  <p>Loading posts...</p>
-  } @else { @if (error()) {
-  <p class="text-red-500">{{ error() }}</p>
+<app-basic-page title="Signals HTTP">
+  @if (loading()) {
+    <p>Loading to dos...</p>
   } @else {
-  <div class="grid grid-cols-3 gap-4">
-    @for (post of posts(); track post.id) {
-    <div class="border border-gray-300 p-4 rounded bg-gray-50">
-      <div
-        [ngClass]="
-          post.completed
-            ? 'bg-green-100 text-green-800'
-            : 'bg-red-100 text-red-800'
-        "
-        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-2 w-max"
-      >
-        {{ post.completed ? "Done" : "Incomplete" }}
+    @if (error()) {
+      <p class="text-red-500">{{ error() }}</p>
+    } @else {
+      <div class="grid grid-cols-3 gap-4">
+        @for (post of posts(); track post.id) {
+          <div class="border border-gray-300 p-4 rounded bg-gray-50">
+            <div
+              [ngClass]="post.completed ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'"
+              class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-2 w-max">
+              {{ post.completed ? 'Done' : 'Incomplete' }}
+            </div>
+            <h3>{{ post.title }}</h3>
+          </div>
+        }
       </div>
-      <h3>{{ post.title }}</h3>
-    </div>
     }
-  </div>
-  } }</app-basic-page
->
+  }
+</app-basic-page>

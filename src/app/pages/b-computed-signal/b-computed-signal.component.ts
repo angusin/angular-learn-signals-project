@@ -1,8 +1,4 @@
-import {
-  Component,
-  computed,
-  signal,
-} from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 @Component({

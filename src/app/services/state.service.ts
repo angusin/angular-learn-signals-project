@@ -11,11 +11,7 @@ export class StateService {
     this.cart.update((items) => {
       const existingProduct = items.find((item) => item.id === productToAdd.id);
       if (existingProduct) {
-        return items.map((item) =>
-          item.id === productToAdd.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
+        return items.map((item) => (item.id === productToAdd.id ? { ...item, quantity: item.quantity + 1 } : item));
       } else {
         return [...items, { ...productToAdd, quantity: 1 }];
       }

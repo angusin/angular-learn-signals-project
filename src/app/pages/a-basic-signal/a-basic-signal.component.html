@@ -1,16 +1,10 @@
-<app-basic-page title="Basic Signals"
-  ><p class="mb-4">Counter: {{ counter() }}</p>
+<app-basic-page title="Basic Signals">
+  <p class="mb-4">Counter: {{ counter() }}</p>
   <div class="space-x-2">
-    <button
-      (click)="set(45)"
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
-    >
+    <button (click)="set(45)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer">
       Set to 45
     </button>
-    <button
-      (click)="increment()"
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
-    >
+    <button (click)="increment()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer">
       Increment
     </button>
   </div>
