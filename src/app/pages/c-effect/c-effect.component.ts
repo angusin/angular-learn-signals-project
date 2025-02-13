@@ -1,10 +1,11 @@
-import { Component, effect, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, signal } from '@angular/core';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 @Component({
   selector: 'app-effect',
   imports: [BasicPageComponent],
   templateUrl: './c-effect.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EffectComponent {
   value = signal(0);

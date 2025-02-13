@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { StateService } from '../../services/state.service';
 
 @Component({
@@ -6,6 +6,7 @@ import { StateService } from '../../services/state.service';
   imports: [],
   templateUrl: './top-shopping-cart.component.html',
   styleUrl: './top-shopping-cart.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopShoppingCartComponent {
   carItemsNumber = computed(() => this.stateService.cart().reduce((sum, item) => sum + item.quantity, 0));

@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 import { CartItem, PRODUCTS } from './data-mock';
@@ -7,6 +7,7 @@ import { CartItem, PRODUCTS } from './data-mock';
   selector: 'app-shopping-cart-example',
   imports: [CommonModule, BasicPageComponent],
   templateUrl: './e-cart-example.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingCartExampleComponent {
   cart = signal<CartItem[]>(PRODUCTS);

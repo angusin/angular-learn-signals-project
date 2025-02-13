@@ -1,10 +1,11 @@
-import { Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
 @Component({
   selector: 'app-computed-signal',
   imports: [BasicPageComponent],
   templateUrl: './b-computed-signal.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ComputedSignalComponent {
   first = signal(0);

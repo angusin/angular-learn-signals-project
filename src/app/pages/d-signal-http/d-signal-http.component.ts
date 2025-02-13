@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
 
@@ -12,6 +12,7 @@ interface Post {
   selector: 'app-signal-http',
   imports: [CommonModule, BasicPageComponent],
   templateUrl: './d-signal-http.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalHttpComponent {
   posts = signal<Post[]>([]);

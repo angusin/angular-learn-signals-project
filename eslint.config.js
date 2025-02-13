@@ -22,6 +22,10 @@ module.exports = tseslint.config(
       '@angular-eslint/prefer-standalone': 'error',
       '@angular-eslint/use-pipe-transform-interface': 'error',
       '@angular-eslint/use-lifecycle-interface': 'warn',
+      '@angular-eslint/no-async-lifecycle-method': 'error',
+      '@angular-eslint/use-component-view-encapsulation': 'error',
+      '@angular-eslint/use-component-selector': 'error',
+      '@angular-eslint/prefer-on-push-component-change-detection': 'warn',
       '@angular-eslint/directive-selector': [
         'error',
         {
