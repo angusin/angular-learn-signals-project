@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { CartItem, PRODUCTS } from '../pages/e-signal-store/data-mock';
+import { CartItem } from '../pages/e-signal-store/data-mock';
 
 @Injectable({
   providedIn: 'root',

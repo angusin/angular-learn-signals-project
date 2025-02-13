@@ -31,7 +31,7 @@ export class SignalHttpComponent {
       this.posts.set(data.slice(0, 10));
       this.loading.set(false);
     } catch (err) {
-      this.error.set('Failed to fetch posts');
+      this.error.set('Failed to fetch posts: ' + err);
       this.loading.set(false);
     }
   }

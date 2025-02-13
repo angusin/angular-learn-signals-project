@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,7 +8,6 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  constructor() {}
 
   menuItems = [
     { name: 'Basic Signals', route: '/basic-signal' },
