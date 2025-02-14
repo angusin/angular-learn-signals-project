@@ -1,11 +1,12 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { CartItem } from '../pages/e-signal-store/data-mock';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StateService {
-  cart = signal<CartItem[]>([]);
+  readonly cart = signal<CartItem[]>([]);
+  readonly cartItemsLength = computed(() => this.cart().length);
 
   updateCart(productToAdd: CartItem) {
     this.cart.update((items) => {

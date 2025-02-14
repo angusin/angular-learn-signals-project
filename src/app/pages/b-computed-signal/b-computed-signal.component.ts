@@ -8,9 +8,9 @@ import { BasicPageComponent } from '../../components/basic-page/basic-page.compo
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ComputedSignalComponent {
-  first = signal(0);
-  second = signal(0);
-  sum = computed(() => this.first() + this.second());
+  readonly first = signal(0);
+  readonly second = signal(0);
+  readonly sum = computed(() => this.first() + this.second());
 
   incrementFirst() {
     this.first.update((value) => value + 1);

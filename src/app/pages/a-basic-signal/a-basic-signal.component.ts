@@ -8,7 +8,7 @@ import { BasicPageComponent } from '../../components/basic-page/basic-page.compo
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicSignalComponent {
-  counter = signal(0);
+  readonly counter = signal(0);
 
   set(value: number) {
     this.counter.set(value);

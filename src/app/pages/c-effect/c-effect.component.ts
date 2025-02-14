@@ -8,8 +8,8 @@ import { BasicPageComponent } from '../../components/basic-page/basic-page.compo
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EffectComponent {
-  value = signal(0);
-  lastEffectRun = signal('');
+  readonly value = signal(0);
+  readonly lastEffectRun = signal('');
 
   constructor() {
     effect(() => {

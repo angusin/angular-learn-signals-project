@@ -11,7 +11,7 @@ import { StateService } from '../../services/state.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalStoreComponent {
-  products = signal<CartItem[]>(PRODUCTS);
+  readonly products = signal<CartItem[]>(PRODUCTS);
 
   stateService = inject(StateService);
 

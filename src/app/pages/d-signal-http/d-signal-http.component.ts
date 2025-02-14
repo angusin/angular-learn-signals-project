@@ -15,9 +15,9 @@ interface Post {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalHttpComponent {
-  posts = signal<Post[]>([]);
-  loading = signal(true);
-  error = signal<string | null>(null);
+  readonly posts = signal<Post[]>([]);
+  readonly loading = signal(true);
+  readonly error = signal<string | null>(null);
 
   constructor() {
     this.fetchPosts();

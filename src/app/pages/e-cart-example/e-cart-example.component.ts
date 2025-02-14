@@ -10,11 +10,11 @@ import { CartItem, PRODUCTS } from './data-mock';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingCartExampleComponent {
-  cart = signal<CartItem[]>(PRODUCTS);
+  readonly cart = signal<CartItem[]>(PRODUCTS);
 
-  totalItems = computed(() => this.cart().reduce((sum, item) => sum + item.quantity, 0));
+  readonly totalItems = computed(() => this.cart().reduce((sum, item) => sum + item.quantity, 0));
 
-  totalPrice = computed(() => this.cart().reduce((sum, item) => sum + item.price * item.quantity, 0));
+  readonly totalPrice = computed(() => this.cart().reduce((sum, item) => sum + item.price * item.quantity, 0));
 
   updateQuantity(id: number, change: number) {
     this.cart.update((items) =>
