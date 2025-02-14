@@ -26,6 +26,10 @@ module.exports = tseslint.config(
       '@angular-eslint/use-component-view-encapsulation': 'error',
       '@angular-eslint/use-component-selector': 'error',
       '@angular-eslint/prefer-on-push-component-change-detection': 'warn',
+      '@angular-eslint/no-pipe-impure': 'error',
+      '@angular-eslint/no-conflicting-lifecycle': 'error',
+      '@angular-eslint/sort-lifecycle-methods': 'error',
+      '@angular-eslint/prefer-signals': 'error',
       '@angular-eslint/directive-selector': [
         'error',
         {
