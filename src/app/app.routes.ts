@@ -27,6 +27,10 @@ export const routes: Routes = [
     path: 'signal-store',
     loadComponent: () => import('./pages/e-signal-store/e-signal-store.component').then((m) => m.SignalStoreComponent),
   },
-
+  {
+    path: 'effects-danger',
+    loadComponent: () =>
+      import('./pages/f-effects-danger/f-effects-danger.component').then((m) => m.EffectsDangerComponent),
+  },
   { path: '', redirectTo: '/basic-signal', pathMatch: 'full' },
 ];

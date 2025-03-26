@@ -16,5 +16,6 @@ export class SidebarComponent {
     { name: 'Signals HTTP', route: '/signal-http' },
     { name: 'Shopping Cart Example', route: '/shopping-cart' },
     { name: 'Signals Store', route: '/signal-store' },
+    { name: '⚠️ Dangerous Effect', route: '/effects-danger' },
   ];
 }

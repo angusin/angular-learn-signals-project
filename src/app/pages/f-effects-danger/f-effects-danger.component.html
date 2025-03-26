@@ -1,0 +1,18 @@
+<app-basic-page title="Dangerous Effect()">
+  <p class="mb-4 font-bold">Cat's Energy Level: {{ catEnergy() }}</p>
+  <p class="mb-4 text-red-600">Warning: This component demonstrates a dangerous effect that causes a memory leak!</p>
+  <p class="mb-4">
+    The effect updates the same signal that triggers it, creating an infinite loop. In this case, the cat's energy keeps
+    increasing uncontrollably!
+  </p>
+  <div class="space-x-2">
+    <button (click)="giveFoodToCat()" class="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Give cat some food
+    </button>
+    <button
+      (click)="deactivateMemorySaver()"
+      class="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Turn off memory saver
+    </button>
+  </div>
+</app-basic-page>
