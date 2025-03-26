@@ -7,5 +7,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicPageComponent {
-  title = input<string>('Page title');
+  readonly title = input<string>('Page title');
 }
