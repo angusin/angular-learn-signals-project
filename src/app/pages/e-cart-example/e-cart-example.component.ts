@@ -19,7 +19,7 @@ export class ShoppingCartExampleComponent {
   updateQuantity(id: number, change: number) {
     this.cart.update((items) =>
       items
-        .map((item) => (item.id === id ? { ...item, quantity: Math.max(0, item.quantity + change) } : item))
+        .map((item) => (item.id === id ? { ...item, quantity: item.quantity + change } : item))
         .filter((item) => item.quantity > 0),
     );
   }

@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicPageComponent } from '../../components/basic-page/basic-page.component';
+import { HttpClient } from '@angular/common/http';
+import { catchError, map, of } from 'rxjs';
 
 interface Post {
   id: number;
@@ -15,23 +17,36 @@ interface Post {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalHttpComponent {
-  readonly posts = signal<Post[]>([]);
   readonly loading = signal(true);
   readonly error = signal<string | null>(null);
+  readonly posts = signal<Post[]>([]);
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.fetchPosts();
   }
 
-  async fetchPosts() {
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users/1/todos');
-      const data = await response.json();
-      this.posts.set(data.slice(0, 10));
-      this.loading.set(false);
-    } catch (err) {
-      this.error.set('Failed to fetch posts: ' + err);
-      this.loading.set(false);
-    }
+  private fetchPosts() {
+    this.http
+      .get<Post[]>('https://jsonplaceholder.typicode.com/users/1/todos')
+      .pipe(
+        map((data) => data.slice(0, 10)),
+        catchError((err) => {
+          this.error.set('Failed to fetch posts: ' + err);
+          return of([]);
+        }),
+      )
+      .subscribe((data) => {
+        this.posts.set(data);
+        this.loading.set(false);
+      });
   }
+
+  /*
+  readonly posts$ = this.http.get<Post[]>('https://jsonplaceholder.typicode.com/users/1/todos').pipe(
+    map((data) => data.slice(0, 10)),
+    catchError((err) => {
+      this.error.set('Failed to fetch posts: ' + err);
+      return of([]);
+    }),
+  ); */
 }
