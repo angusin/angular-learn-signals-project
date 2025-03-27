@@ -32,5 +32,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/f-effects-danger/f-effects-danger.component').then((m) => m.EffectsDangerComponent),
   },
+  {
+    path: 'change-strategy',
+    loadComponent: () =>
+      import('./pages/g-change-strategy/g-change-strategy.component').then((m) => m.ChangeStrategyComponent),
+  },
   { path: '', redirectTo: '/basic-signal', pathMatch: 'full' },
 ];

@@ -12,6 +12,7 @@ export class SidebarComponent {
   menuItems = [
     { name: 'Basic Signals', route: '/basic-signal' },
     { name: 'Computed Signals', route: '/computed-signal' },
+    { name: 'Change Detection', route: '/change-strategy' },
     { name: 'Effect()', route: '/effect' },
     { name: 'Signals HTTP', route: '/signal-http' },
     { name: 'Shopping Cart Example', route: '/shopping-cart' },
